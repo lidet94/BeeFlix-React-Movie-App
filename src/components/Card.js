@@ -1,17 +1,37 @@
-import React from 'react'
-/*each movie thumbnail*/
-export const Card = () => {
-  return (
-    <div>
-            <img src='https://www.cinemaclock.com/images/580x326/26/one-of-them-days-20257070.jpg' alt='placeholder-img'></img>
-      <p>Title</p>
-      <p>Description</p>
-      <p>Released Date</p>
-      <p>Duration of film</p>
-      <p>rating</p>
+import React, { useState } from 'react'
+import { Modal } from './Modal'
 
-    </div>
-  )
+export const Card = ({movie}) => {
+
+  const [isOpen, setIsOpen] = useState(false)
+
+function openModal() {
+  setIsOpen(true);
 }
 
+function closeModal() {
+  setIsOpen(false);
+}
+
+  return (
+    <>
+   
+      <div
+      className='movie-card'
+      onClick={openModal}
+      >
+        <img src={movie.poster_image} alt={movie.movie_title}></img>
+        <p>{movie.movie_title}</p>
+      </div>
+    <div>  
+<Modal
+isOpen={isOpen}
+movie={movie}
+onClose={closeModal}
+/>
+    </div>
+  </>
+  )
+
+}
 

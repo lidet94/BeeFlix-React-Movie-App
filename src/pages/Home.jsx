@@ -3,6 +3,7 @@ import { organiseByCategory } from "../utils/organiseByCategory"
 import  movies from '../data/movies.json'
 import { Row } from "../components/Row"
 
+
 export default function Home() {
 
   const grouped = organiseByCategory(movies)
@@ -14,7 +15,9 @@ export default function Home() {
         key={category}
         title={category}
         movies={grouped[category]}
+        
         />
+        
       ))}
     </div>
   )

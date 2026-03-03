@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react';
 import { Hero } from './components/Hero';
-import { Modal } from './components/Modal';
 import { NavBar } from './components/NavBar';
 import { Row } from './components/Row';
 import { SearchBar } from './components/SearchBar';
@@ -24,7 +23,6 @@ const [search, setSearch] = useState('');
    <Home />
    <Row/>
    <MyListContext search={search}/>
-   <Modal />
    </>
   );
 }

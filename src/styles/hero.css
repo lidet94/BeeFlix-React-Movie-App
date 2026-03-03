@@ -1,0 +1,28 @@
+.hero-section{
+    margin: 30px;
+}
+
+.hero-image{
+ height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+
+}
+
+.hero-buttons{
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.hero-buttons:hover {
+  background-color: white;
+
+}

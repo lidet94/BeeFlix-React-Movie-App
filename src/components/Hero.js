@@ -1,12 +1,28 @@
 import React from 'react'
-/*big banner at the top*/
-export const Hero = () => {
-  return (
-    <div>
-      <img src='https://image.tmdb.org/t/p/original/fP5Av77Y2p7S8chbr3ZOu8PYTUb.jpg' alt='placeholder-img'></img>
+import '../styles/hero.css'
+import movies from '../data/movies.json'
 
-      <button>Play</button>
-      <button>More Info</button>
+export const Hero = () => {
+
+  const trendingMovies = movies.filter(movie => movie.isTrending === true)
+  const trendingMovie = trendingMovies[Math.floor(Math.random() * trendingMovies.length)]
+
+
+  return (
+    <div className='hero-section'>
+      <div className='hero-image'
+      style={
+        {background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+          url(${trendingMovie.poster_image})`
+}
+      }> 
+        </div>
+
+      <div className='hero-buttons'>
+        <button>Play</button>
+        <button>More Info</button>
+      </div>
+
     </div>
   )
 }
