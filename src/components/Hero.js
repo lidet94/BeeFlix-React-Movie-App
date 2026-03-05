@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/hero.css'
 import movies from '../data/movies.json'
 
 export const Hero = () => {
 
   const trendingMovies = movies.filter(movie => movie.isTrending === true)
-  const trendingMovie = trendingMovies[Math.floor(Math.random() * trendingMovies.length)]
-
+  const [trendingMovie] = useState(trendingMovies[Math.floor(Math.random() * trendingMovies.length)]
+)
 
   return (
     <div className='hero-section'>
