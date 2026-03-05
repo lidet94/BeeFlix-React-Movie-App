@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from './Modal'
 
-export const Card = ({movie}) => {
+export const Card = ({movie, addToMyList, removeMyList, isInMyList}) => {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -28,6 +28,9 @@ function closeModal() {
 isOpen={isOpen}
 movie={movie}
 onClose={closeModal}
+addToMyList={addToMyList} 
+removeMyList={removeMyList} 
+isInMyList={isInMyList}
 />
     </div>
   </>
