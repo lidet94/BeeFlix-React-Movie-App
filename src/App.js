@@ -38,7 +38,10 @@ function App() {
       {page === "home" && (
         <>
 
-          <Hero />
+          <Hero
+            addToMyList={addToMyList}
+            removeMyList={removeMyList}
+            isInMyList={isInMyList} />
           <Home
             search={search}
             addToMyList={addToMyList}
