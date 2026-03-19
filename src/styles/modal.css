@@ -1,7 +1,7 @@
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(141, 122, 122, 0.5);
+  background: rgba(0,0,0,0.7);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -10,11 +10,19 @@
 }
 
 .modal-content {
-  background: #927373;
+  background-color: var(--background-900);
+  color: var(--text-100);
   padding: 20px;
   border-radius: 12px;
   max-width: 500px;
   width: 90%;
+  cursor: pointer;
+}
+
+.modal-content button {
+  background-color: var(--primary-500);
   color: white;
+  border: none;
+  margin-right: 1rem;
   cursor: pointer;
 }
