@@ -1,0 +1,10 @@
+input {
+  background-color: var(--background-800);
+  color: var(--text-100);
+  border: 1px solid var(--background-600);
+  padding: 0.5rem;
+}
+
+input::placeholder {
+  color: var(--text-500);
+}
