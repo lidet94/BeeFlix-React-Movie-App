@@ -1,21 +1,27 @@
-import React, { useState } from 'react'
+import '../styles/navbar.css'
 import { SearchBar } from './SearchBar'
-/*logo + search bar + maybe MyList button*/
-export const NavBar = ({ setPage }) => {
 
-    
+
+export const NavBar = ({ setPage, onSearch }) => {
+
     
   return (
- <nav>
-    <h4 onClick={() => setPage("home")}>BEEFLIX</h4>
+ <nav className='navbar'>
+    
+    <div className='navbar-left'>
+      <h4 onClick={() => setPage("home")}>BEEFLIX</h4>
+</div>
 
-      <button onClick={() => setPage("home")}>
+ <div className="navbar-right">
+    <SearchBar onSearch={onSearch} />
+      <button className='home-btn' onClick={() => setPage("home")}>
         Home
       </button>
 
-      <button onClick={() => setPage("mylist")}>
+      <button className='list-btn' onClick={() => setPage("mylist")}>
         My List
       </button>
+  </div>
  </nav>      
   )
 }
