@@ -14,7 +14,7 @@ export const Modal = ({isOpen, movie, onClose, addToMyList, removeMyList, isInMy
     >
 
     <div className='modal-content'>
-  <img src={movie.poster_image} alt='placeholder-img'></img>
+  <img src={movie.poster_image} alt={movie.movie_title}></img>
       <p>{movie.movie_title}</p>
       <p>{movie.description}</p>
       <p><span style={{fontWeight:'bold'}} >Released:</span> {movie.release_date}</p>
