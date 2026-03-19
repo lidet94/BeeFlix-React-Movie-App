@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+body {
+  background-color: var(--primary-950);
+  color: var(--text-100);
+  margin: 0;
+
+}
