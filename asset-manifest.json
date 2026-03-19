@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BeeFlix-React-Movie-App/static/css/main.2b0b2304.css",
+    "main.js": "/BeeFlix-React-Movie-App/static/js/main.12365a43.js",
+    "static/js/453.457f9a95.chunk.js": "/BeeFlix-React-Movie-App/static/js/453.457f9a95.chunk.js",
+    "index.html": "/BeeFlix-React-Movie-App/index.html",
+    "main.2b0b2304.css.map": "/BeeFlix-React-Movie-App/static/css/main.2b0b2304.css.map",
+    "main.12365a43.js.map": "/BeeFlix-React-Movie-App/static/js/main.12365a43.js.map",
+    "453.457f9a95.chunk.js.map": "/BeeFlix-React-Movie-App/static/js/453.457f9a95.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b0b2304.css",
+    "static/js/main.12365a43.js"
+  ]
+}
