@@ -21,11 +21,16 @@ export const Modal = ({isOpen, movie, onClose, addToMyList, removeMyList, isInMy
       <p><span style={{fontWeight:'bold'}}>Duration:</span> {movie.duration_minutes}</p>
       <p><span style={{fontWeight:'bold'}}>Rating:</span> {movie.rating}</p>
       <p><span style={{fontWeight:'bold'}}>Genre:</span> {movie.category}</p>
-      <button onClick={()=> addToMyList(movie)}>Add to List</button>
-      <button onClick={()=> removeMyList(movie.id)}>Remove from List</button>
+
+      {(!isInMyList(movie.id)) ? (
+        <button onClick={()=> addToMyList(movie)}>Add to List</button>
+      ) : 
+        <button onClick={()=> removeMyList(movie.id)}>Remove from List</button>
+      }
 
       <button onClick={onClose}>Close</button>
     </div>
+
     </div>
   )
 
