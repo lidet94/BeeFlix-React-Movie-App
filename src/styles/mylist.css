@@ -1,0 +1,9 @@
+.mylist-section {
+margin: 10px;
+}
+
+.empty-list {
+  color: var(--text-100);
+  padding: 20px;
+}
+
