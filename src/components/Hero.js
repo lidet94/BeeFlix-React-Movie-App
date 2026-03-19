@@ -6,21 +6,17 @@ export const Hero = () => {
 
   const trendingMovies = movies.filter(movie => movie.isTrending === true)
   const [trendingMovie] = useState(trendingMovies[Math.floor(Math.random() * trendingMovies.length)]
-)
+  )
 
   return (
-    <div className='hero-section'>
-      <div className='hero-image'
-      style={
-        {background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-          url(${trendingMovie.poster_image})`
-}
-      }> 
-        </div>
+    <div className='hero-section' style={{ backgroundImage: `url(${trendingMovie.poster_image})` }}>
+
+      <h1 className='hero-title'>{trendingMovie.movie_title}</h1>
+
 
       <div className='hero-buttons'>
-        <button>Play</button>
-        <button>More Info</button>
+        <button className='play-btn'>Play</button>
+        <button className='info-btn'>More Info</button>
       </div>
 
     </div>
